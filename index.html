@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevDesigner | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6c0df2",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-mesh {
+            background-color: #171022;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(108, 13, 242, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(108, 13, 242, 0.1) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<!-- Main Wrapper -->
+<div class="relative min-h-screen flex flex-col bg-mesh">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl">terminal</span>
+</div>
+<span class="text-xl font-black tracking-tight text-white">DevDesigner</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="work.html">Work</a>
+    <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="about.html">About</a>
+
+</nav>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative z-10 space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                            Available for new projects
+                        </div>
+<h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-white">
+                            Crafting seamless <span class="text-primary">code</span>. Designing intuitive <span class="text-primary/80">experiences</span>.
+                        </h1>
+<p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl font-display">
+                            Full-Stack Developer &amp; UI/UX Designer specialized in building scalable web applications with a focus on user-centric design.
+                        </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button id="openProjectsModal" class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-primary/25 flex items-center gap-2">
+        View Projects
+        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+<script>
+document.querySelector('#openProjectsModal').addEventListener('click', function() {
+    window.location.href = 'work.html';
+});
+</script>
+<button id="openStoryModal" class="bg-transparent border border-primary/30 hover:bg-primary/5 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all">
+        Read My Story
+</button>
+<script>
+document.querySelector('#openStoryModal').addEventListener('click', function() {
+    window.location.href = 'about.html#read-my-story';
+});
+</script>
+</div>
+</div>
+<!-- Hero Visual Component -->
+<div class="relative lg:h-[600px] flex items-center justify-center">
+<!-- Abstract Code/Design Graphic -->
+<div class="relative w-full aspect-square max-w-[500px] rounded-3xl bg-primary/5 border border-primary/10 overflow-hidden shadow-2xl">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+<div class="absolute top-10 left-10 p-6 bg-background-dark/90 rounded-2xl border border-primary/20 shadow-xl backdrop-blur">
+<pre class="text-xs text-primary/80 font-mono"><span class="text-blue-400">const</span> designer = {
+  role: <span class="text-green-400">'UI/UX'</span>,
+  vision: <span class="text-green-400">'User Centric'</span>,
+  tools: [<span class="text-green-400">'Figma'</span>, <span class="text-green-400">'React'</span>]
+};</pre>
+</div>
+<div class="absolute bottom-10 right-10 p-8 bg-primary/20 rounded-full w-64 h-64 blur-3xl"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-48 h-48 border-2 border-primary/30 rounded-xl rotate-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-6xl opacity-50">auto_awesome</span>
+</div>
+<div class="absolute w-48 h-48 border-2 border-primary/30 rounded-full -rotate-12"></div>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40" data-alt="Modern laptop with abstract design patterns on screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARS6yGcxVYyeNe9Ub4HC2hsKdCjIyVx9XqDAlTsUIoh_DPKPgu8-maSvZBMJtLy51YMtS3XxYjz51FISDGJltI3k4jg66A0NGty6beRj2siHBsoQFdZwVWTQJs_ato7wxM6dh0GO2mAPNgVNxgZa5LZTgB5mG3xezS5NKK4bP8mq6_INw5ewPD4wlo7CHUSk5lYOMGbBfrxkgwVHnSPrtLY_TCKUixjOjgpZEbmDJ_mE_xrsq27pnWoRVKBO9WZUuwTU_sYiTTDgw"/>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-background-dark/50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm">Expertise</h2>
+<h3 class="text-4xl md:text-5xl font-black text-white">Capabilities</h3>
+<p class="text-slate-400 text-lg">Bringing technical expertise and creative vision to every digital product I build.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Design Card -->
+<div class="group p-8 rounded-2xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all duration-300 hover:-translate-y-2">
+<div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl transition-colors">palette</span>
+</div>
+<h4 class="text-2xl font-bold text-white mb-4">Design</h4>
+<p class="text-slate-400 leading-relaxed">
+                                Wireframing, Prototyping, and Design Systems tailored for modern brands. I focus on creating intuitive flows and visual harmony.
+                            </p>
+<ul class="mt-6 space-y-2 text-sm text-slate-500 font-medium">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> UI/UX Design</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Brand Identity</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Interactive Prototypes</li>
+</ul>
+</div>
+<!-- Development Card -->
+<div class="group p-8 rounded-2xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all duration-300 hover:-translate-y-2">
+<div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl transition-colors">code</span>
+</div>
+<h4 class="text-2xl font-bold text-white mb-4">Development</h4>
+<p class="text-slate-400 leading-relaxed">
+                                Building scalable applications using React, Node.js, and Cloud Infrastructure. Clean code and performance are my top priorities.
+                            </p>
+<ul class="mt-6 space-y-2 text-sm text-slate-500 font-medium">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Frontend Development</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Backend Systems</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Performance Optimization</li>
+</ul>
+</div>
+<!-- Strategy Card -->
+<div class="group p-8 rounded-2xl bg-primary/5 border border-primary/10 hover:border-primary/40 transition-all duration-300 hover:-translate-y-2">
+<div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl transition-colors">lightbulb</span>
+</div>
+<h4 class="text-2xl font-bold text-white mb-4">Strategy</h4>
+<p class="text-slate-400 leading-relaxed">
+                                Defining product roadmaps through user research and data-driven insights. Bridging the gap between business goals and user needs.
+                            </p>
+<ul class="mt-6 space-y-2 text-sm text-slate-500 font-medium">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Product Strategy</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> User Research</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Technical Consulting</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section class="py-24 bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm">Growth</h2>
+<h3 class="text-4xl md:text-5xl font-black text-white">Technical Skills &amp; Experience</h3>
+<p class="text-slate-400 text-lg">A breakdown of my proficiency and years of hands-on experience in various technologies.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div class="space-y-8">
+<h4 class="text-2xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">insights</span> Proficiency Levels
+                </h4>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-slate-300 font-medium">Frontend Development (React, Vue, Next.js)</span>
+<span class="text-primary font-bold">95%</span>
+</div>
+<div class="w-full h-3 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-slate-300 font-medium">UI/UX Design (Figma, Just In Mind)</span>
+<span class="text-primary font-bold">70%</span>
+</div>
+<div class="w-full h-3 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-slate-300 font-medium">Backend &amp; Cloud (Node, PHP, MySQL, Express, MongoDB)</span>
+<span class="text-primary font-bold">85%</span>
+</div>
+<div class="w-full h-3 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<h4 class="text-2xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">timeline</span> Experience Timeline
+                </h4>
+<div class="relative border-l-2 border-primary/20 ml-4 space-y-8 pb-4">
+<div class="relative pl-8">
+<div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary"></div>
+<div class="flex flex-col">
+<span class="text-primary font-bold text-sm uppercase">2022 — Present</span>
+<h5 class="text-lg font-bold text-white">Senior Full-Stack Developer</h5>
+<p class="text-slate-400">Leading development teams and architecting high-performance web applications.</p>
+</div>
+</div>
+<div class="relative pl-8">
+<div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary/40"></div>
+<div class="flex flex-col">
+<span class="text-primary/70 font-bold text-sm uppercase">2019 — Present</span>
+<h5 class="text-lg font-bold text-white">UI/UX Designer &amp; Frontend Dev</h5>
+<p class="text-slate-400">Bridging the gap between design and implementation for various startups.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-24 bg-background-dark/30 border-t border-primary/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<div class="md:w-1/3">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-4">Academic</h2>
+<h3 class="text-4xl font-black text-white">Education</h3>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 gap-8">
+<div class="p-8 rounded-2xl bg-primary/5 border border-primary/10 flex flex-col md:flex-row gap-6 items-start">
+<div class="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+</div>
+<div>
+<span class="text-primary font-bold text-sm">2015</span>
+<h4 class="text-xl font-bold text-white mt-1">Mobile Apps</h4>
+<p class="text-slate-300 font-medium">CODECAMP</p>
+<p class="text-slate-500 mt-2 text-sm leading-relaxed">Focused on creating Mobile Apps with MIT App Inventor. Graduated with honors.</p>
+</div>
+</div>
+<div class="p-8 rounded-2xl bg-primary/5 border border-primary/10 flex flex-col md:flex-row gap-6 items-start">
+<div class="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+</div>
+<div>
+<span class="text-primary font-bold text-sm">2019-2020</span>
+<h4 class="text-xl font-bold text-white mt-1">Frontend Development</h4>
+<p class="text-slate-300 font-medium">Codetrain Gh</p>
+<p class="text-slate-500 mt-2 text-sm leading-relaxed">Majored in frontend development with a focus on modern web technologies.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-primary/10 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-16">
+<div class="space-y-4 max-w-md">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">terminal</span>
+</div>
+<span class="text-xl font-black text-white">DevDesigner</span>
+</div>
+<p class="text-slate-400">
+                            Available for new projects and collaborations. Let's build something exceptional together.
+                        </p>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="text-white font-bold">Connect</h5>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="kobbyrhymes23@gmail.com">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="https://mosko.netlify.app">
+<span class="material-symbols-outlined">link</span>
+</a>
+<!--<a class="w-12 h-12 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="https://github.com/korhycodes">
+<span class="material-symbols-outlined">hub</span>
+</a>-->
+</div>
+</div>
+</div>
+<div class="pt-10 border-t border-primary/5 flex flex-col md:flex-row justify-between gap-6 text-sm text-slate-500">
+<p>© 2026. All rights reserved.</p>
+<!--<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Donate to support</a>
+<a class="hover:text-white transition-colors" href="#"></a>
+</div>-->
+</div>
+</div>
+</footer>
+<div class="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-6">
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 border border-primary/20 text-white hover:bg-primary hover:scale-110 transition-all duration-300 group" href="https://github.com/korhycodes">
+<span class="material-symbols-outlined text-2xl">code_blocks</span>
+<span class="absolute right-full mr-4 px-2 py-1 rounded bg-background-dark text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">GitHub</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 border border-primary/20 text-white hover:bg-primary hover:scale-110 transition-all duration-300 group" href="https://www.linkedin.com/in/mr-blankson-186248268">
+<span class="material-symbols-outlined text-2xl">person_add</span>
+<span class="absolute right-full mr-4 px-2 py-1 rounded bg-background-dark text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">LinkedIn</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 border border-primary/20 text-white hover:bg-primary hover:scale-110 transition-all duration-300 group" href="https://wa.me/0000000000?text=Hi%21%20I%20just%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20or%20a%20potential%20opportunity%20with%20you.
+">
+<span class="material-symbols-outlined text-2xl">chat</span>
+<span class="absolute right-full mr-4 px-2 py-1 rounded bg-background-dark text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">WhatsApp</span>
+</a>
+</div></div>
+</body></html>
