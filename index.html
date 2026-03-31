@@ -59,9 +59,16 @@
     <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="about.html">About</a>
 
 </nav>
-<button class="md:hidden text-white">
-<span class="material-symbols-outlined">menu</span>
+<!-- Hamburger Menu Button -->
+<button id="menu-btn" class="md:hidden text-white">
+  <span class="material-symbols-outlined">menu</span>
 </button>
+
+<!-- Navigation for Hamburger Menu-->
+<nav id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-background-dark/95 border-b border-primary/10 flex-col items-center gap-6 py-8 md:static md:w-auto md:bg-transparent md:border-none md:flex md:flex-row md:py-0 md:gap-10">
+    <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="work.html">Work</a>
+    <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="about.html">About</a>
+</nav>
 </div>
 </header>
 <main class="flex-grow">
@@ -301,8 +308,8 @@ document.querySelector('#openStoryModal').addEventListener('click', function() {
 <span class="text-xl font-black text-white">DevDesigner</span>
 </div>
 <p class="text-slate-400">
-                            Available for new projects and collaborations. Let's build something exceptional together.
-                        </p>
+Available for new projects and collaborations. Let's build something exceptional together.
+</p>
 </div>
 <div class="flex flex-col gap-6">
 <h5 class="text-white font-bold">Connect</h5>
@@ -342,5 +349,20 @@ document.querySelector('#openStoryModal').addEventListener('click', function() {
 <span class="material-symbols-outlined text-2xl">chat</span>
 <span class="absolute right-full mr-4 px-2 py-1 rounded bg-background-dark text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">WhatsApp</span>
 </a>
-</div></div>
-</body></html>
+</div>
+</div>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    // Toggle the 'hidden' class to show/hide the menu
+    menu.classList.toggle('hidden');
+    // Change flex direction for mobile
+    menu.classList.toggle('flex');
+  });
+</script>
+     
+</body>
+</html>
