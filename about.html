@@ -21,8 +21,14 @@
         </div>
         <span class="text-xl font-black tracking-tight text-white">DevDesigner</span>
       </div>
-      <nav class="hidden md:flex items-center gap-10">
-        <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="index.html">back to home page</a>
+      <nav class="flex items-center gap-10">
+        <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors flex items-center gap-2" href="index.html">
+          <!-- Back arrow: visible on mobile, hidden on md screens -->
+          <span class="material-symbols-outlined md:hidden">arrow_back</span>
+          
+          <!-- Text: hidden on mobile, visible on md screens -->
+          <span class="hidden md:inline">back to home page</span>
+        </a>
       </nav>
     </div>
   </header>
